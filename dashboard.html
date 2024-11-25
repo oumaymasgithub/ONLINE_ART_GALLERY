@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Online Art Gallery</title>
+    <style>
+        /* Reset and Body Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Georgia', serif;
+            background: linear-gradient(to bottom right, #fdf6e3, #f5f3e6);
+            color: #333;
+        }
+
+        /* Header Styles */
+        .header {
+            text-align: center;
+            background-color: #4a4e69;
+            color: #f2e9e4;
+            padding: 1em 0;
+            font-size: 2.5em;
+            font-weight: bold;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Container Styles */
+        .container {
+            padding: 2em;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #4a4e69;
+            margin-bottom: 0.5em;
+        }
+
+        .welcome-message {
+            font-size: 1.5em;
+            color: #6d6875;
+            margin-bottom: 3em;
+        }
+
+        /* Card Styles */
+        .dashboard-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5em;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 2em;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Decorative Gradient */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom right, #c9ada7, #9a8c98);
+            opacity: 0.1;
+            z-index: -1;
+            transition: opacity 0.3s;
+        }
+
+        .card:hover::before {
+            opacity: 0.3;
+        }
+
+        /* Card Text Styles */
+        .card a {
+            text-decoration: none;
+            color: #4a4e69;
+            font-size: 1.4em;
+            font-weight: bold;
+            display: block;
+            transition: color 0.3s;
+        }
+
+        .card a:hover {
+            color: #9a8c98;
+        }
+
+        /* Button-Like Links */
+        .card a::after {
+            content: '';
+            display: block;
+            margin: 0.5em auto 0;
+            width: 50px;
+            height: 2px;
+            background-color: #9a8c98;
+            transition: width 0.3s ease;
+        }
+
+        .card a:hover::after {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">ONLINE ART GALLERY</div>
+    <div class="container">
+        <h1>Dashboard</h1>
+        <p class="welcome-message">Welcome to your artistic hub! Navigate through your options below.</p>
+        <div class="dashboard-links">
+            <div class="card">
+                <a href="upload-art.html">Upload Your Masterpiece</a>
+            </div>
+            <div class="card">
+                <a href="view-gallery.html">Explore the Gallery</a>
+            </div>
+            <div class="card">
+                <a href="manage-profile.html">Edit Your Profile</a>
+            </div>
+            <div class="card">
+                <a href="logout.html">Sign Out</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
