@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery - View Artworks</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f6f6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            box-sizing: border-box;
+        }
+        header {
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            font-size: 2.8em;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-bottom: 3px solid #feb47b;
+        }
+        .filter-container {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .filter-container select, .filter-container input, .filter-container button {
+            padding: 12px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1.1em;
+        }
+        .filter-container button {
+            background-color: #ff7e5f;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .filter-container button:hover {
+            background-color: #feb47b;
+        }
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+        }
+        .artwork-item {
+            width: 300px;
+            margin: 20px;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .artwork-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .artwork-item:hover img {
+            transform: scale(1.05);
+            opacity: 0.85;
+        }
+        .artwork-item:hover {
+            transform: scale(1.05);
+        }
+        .artwork-details {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .artwork-item:hover .artwork-details {
+            opacity: 1;
+        }
+        .artwork-details h3 {
+            font-size: 1.6em;
+            margin-bottom: 10px;
+            color: #feb47b;
+            text-transform: uppercase;
+        }
+        .artwork-details p {
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+
+<header>Online Art Gallery</header>
+
+<div class="filter-container">
+    <select>
+        <option value="all">All Genres</option>
+        <option value="modern">Modern</option>
+        <option value="abstract">Abstract</option>
+        <option value="classical">Classical</option>
+    </select>
+    <select>
+        <option value="all">All Artists</option>
+        <option value="artist1">Artist 1</option>
+        <option value="artist2">Artist 2</option>
+    </select>
+    <input type="text" placeholder="Search Artworks..." />
+    <button>Search</button>
+</div>
+
+<div class="gallery-container">
+    <div class="artwork-item">
+        <img src="artwork1.jpg" alt="Artwork 1">
+        <div class="artwork-details">
+            <h3>Artwork 1</h3>
+            <p>by Artist 1</p>
+            <p>$500</p>
+        </div>
+    </div>
+    <div class="artwork-item">
+        <img src="artwork2.jpg" alt="Artwork 2">
+        <div class="artwork-details">
+            <h3>Artwork 2</h3>
+            <p>by Artist 2</p>
+            <p>$750</p>
+        </div>
+    </div>
+    <div class="artwork-item">
+        <img src="artwork3.jpg" alt="Artwork 3">
+        <div class="artwork-details">
+            <h3>Artwork 3</h3>
+            <p>by Artist 3</p>
+            <p>$300</p>
+        </div>
+    </div>
+    <!-- Add more artwork items here -->
+</div>
+
+</body>
+</html>
